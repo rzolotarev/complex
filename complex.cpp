@@ -1,13 +1,17 @@
-#include ".\complex.h"
+#include "complex.h"
+#include <math.h>
 
-class Complex {
-    double re, im;
-    public:
-        Complex(double a_re, double a_im) {
-            re = a_re; im = a_im;
-        }
-        Complex() {
-            re = 0; im = 0;
-        }
+Complex::Complex(double a_re, double a_im)
+{
+    re = a_re; im = a_im;
+}
 
-};
+Complex::Complex()
+{
+    re = 0; im = 0;
+}
+
+double Complex::modulo()
+{
+    return sqrt(re*re + im*im);
+}
