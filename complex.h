@@ -10,9 +10,9 @@ public:
         re = a_re;
         im = 0.0;
     }
-    double modulo();
-    double modulo(Complex c);
-    Complex operator+(const Complex &c);
+    double modulo() const;
+    double modulo(Complex c) const;
+    Complex operator+(const Complex &c) const;
 
 };
 #endif
