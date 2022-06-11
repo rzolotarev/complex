@@ -9,7 +9,13 @@ Complex::Complex(double a_re, double a_im)
 
 Complex::Complex()
 {
+    printf("default constructor\n");
     re = 0; im = 0;
+}
+
+Complex::~Complex()
+{
+    printf("destructor\n");
 }
 
 double Complex::modulo() const
