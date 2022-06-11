@@ -12,7 +12,7 @@ public:
     }
     double modulo();
     double modulo(Complex c);
-    Complex operator+(Complex c);
+    Complex operator+(const Complex &c);
 
 };
 #endif
