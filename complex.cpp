@@ -17,6 +17,11 @@ double Complex::modulo()
     return sqrt(re*re + im*im);
 }
 
+double Complex::modulo(Complex c)
+{
+    return sqrt(re*c.re + im*c.im);
+}
+
 Complex Complex::operator+(Complex c){
     Complex res(re+c.re, im + c.im);
     return res;
