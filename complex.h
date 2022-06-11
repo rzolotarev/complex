@@ -7,5 +7,6 @@ public:
     Complex();
     Complex(double a_re, double a_im);        
     double modulo();
+    Complex operator+(Complex c);
 };
 #endif

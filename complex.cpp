@@ -1,5 +1,6 @@
 #include "complex.h"
 #include <math.h>
+#include <stdio.h>
 
 Complex::Complex(double a_re, double a_im)
 {
@@ -14,4 +15,9 @@ Complex::Complex()
 double Complex::modulo()
 {
     return sqrt(re*re + im*im);
+}
+
+Complex Complex::operator+(Complex c){
+    Complex res(re+c.re, im + c.im);
+    return res;
 }
