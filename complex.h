@@ -10,6 +10,8 @@ public:
     Complex(double a_re);
     Complex(const Complex &c);    
     double modulo() const;
+    double get_re() const;
+    double get_im() const;
     double modulo(Complex c) const;
     Complex operator+(const Complex &c) const;
     ~Complex();

@@ -26,9 +26,19 @@ Complex::Complex(const Complex &c): re(0.0), im(0.0)
         p[i] = c.p[i];
 }
 
+double Complex::get_re() const
+{
+    return re;
+}
+
+double Complex::get_im() const
+{
+    return im;
+}
+
 Complex::~Complex()
 {
-    printf("destructor %f %f \n", re, im);
+    printf("destructor for %f %f \n", re, im);
 }
 
 double Complex::modulo() const
@@ -45,4 +55,9 @@ Complex Complex::operator+(const Complex &c) const
 {
     printf("operator+\n");
     return Complex(re+c.re, im + c.im);
+}
+
+Complex operator-(const Complex &a, const Complex &b)
+{
+    return Complex(a.get_re() + b.get_re(), a.get_im() + b.get_im());
 }
