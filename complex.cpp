@@ -2,32 +2,27 @@
 #include <math.h>
 #include <stdio.h>
 
-Complex::Complex(double a_re, double a_im)
+Complex::Complex(double a_re, double a_im): re(a_re), im(a_im)
 {
     p = new int[20];
-    re = a_re; im = a_im;
 }
 
-Complex::Complex(double a_re)
+Complex::Complex(double a_re): re(a_re), im(0.0)
 {
     p = new int[20];
-    re = a_re;
-    im = 0.0;
 }
 
-Complex::Complex()
+Complex::Complex(): re(0.0), im(0.0)
 {
     printf("default constructor\n");
     p = new int[20];
-    re = 0; im = 0;
 }
 
-Complex::Complex(const Complex &c)
+Complex::Complex(const Complex &c): re(0.0), im(0.0)
 {
     printf("copy constructor\n");
-    re = 0; im = 0;
     p = new int[20];
-    for(int i = 0; i < 20; i++)    
+    for(int i = 0; i < 20; i++)
         p[i] = c.p[i];
 }
 
