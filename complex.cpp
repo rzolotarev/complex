@@ -59,5 +59,5 @@ Complex Complex::operator+(const Complex &c) const
 
 Complex operator-(const Complex &a, const Complex &b)
 {
-    return Complex(a.get_re() + b.get_re(), a.get_im() + b.get_im());
+    return Complex(a.re + b.re, a.im + b.im);
 }

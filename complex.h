@@ -6,14 +6,15 @@ private:
     int *p;
 public:
     Complex();
-    Complex(double a_re, double a_im);
+    Complex(double, double);
     Complex(double a_re);
     Complex(const Complex &c);    
     double modulo() const;
     double get_re() const;
     double get_im() const;
     double modulo(Complex c) const;
-    Complex operator+(const Complex &c) const;
+    Complex operator+(const Complex &) const;
+    friend Complex operator-(const Complex &, const Complex &);
     ~Complex();
 };
 #endif
