@@ -62,3 +62,13 @@ Complex operator-(const Complex &a, const Complex &b)
     printf("operator-\n");
     return Complex(a.re + b.re, a.im + b.im);
 }
+
+Complex Complex::operator*(const Complex &c) const
+{
+    return Complex(re*c.re, im*c.im);
+}
+
+Complex operator/(const Complex &a, const Complex &b)
+{
+    return Complex(a.re*b.re, a.im*b.im);
+}
