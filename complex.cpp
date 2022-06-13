@@ -68,6 +68,25 @@ Complex Complex::operator*(const Complex &c) const
     return Complex(re*c.re, im*c.im);
 }
 
+Complex& Complex::operator=(const Complex &c)
+{
+    re = c.re;
+    im = c.im;
+    return *this;
+}
+
+void Complex::operator+=(const Complex &c)
+{
+    re += c.re;
+    im += c.im;    
+}
+
+void Complex::operator=(double x)
+{
+    re = x;
+    im = 0;
+}
+
 Complex operator/(const Complex &a, const Complex &b)
 {
     return Complex(a.re*b.re, a.im*b.im);
