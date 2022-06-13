@@ -51,13 +51,14 @@ double Complex::modulo(Complex c) const
     return sqrt(re*c.re + im*c.im);
 }
 
-Complex Complex::operator+(const Complex &c) const
+Complex operator+(const Complex &a, const Complex &c)
 {
     printf("operator+\n");
-    return Complex(re+c.re, im + c.im);
+    return Complex(a.re+c.re, a.im + c.im);
 }
 
 Complex operator-(const Complex &a, const Complex &b)
 {
+    printf("operator-\n");
     return Complex(a.re + b.re, a.im + b.im);
 }
