@@ -1,17 +1,26 @@
 #include ".\complex.h"
 #include ".\IntArray\int_array.h"
+#include ".\MyInt\my_int.h"
 #include <stdio.h>
+
+void non_const(MyInt a)
+{
+    a.set_i(10);
+    printf("aha %d\n", a.get_i());
+}
 
 int main()
 {    
-    Complex a(1.0, 1.0);
-    a = 5.0;
-    printf("operator= %f\n", a.get_re());
-    printf("operator= %f\n", a.get_im());
-    Complex b(2.0, 2.0);
-    Complex c(3.0, 3.0);
-    b = c;
-    printf("operator= %f\n", b.get_re());
+    // int i = 4;
+    // int b = i++;
+    // =16;
+    // MyInt(5) = 7;
+    MyInt test(4);
+    ++test=16;
+
+    non_const(MyInt(5));
+    
+    // printf("test %d\n", test.get_i());
     // Complex z = a + b + c;
     // printf("end of expression\n");
 
