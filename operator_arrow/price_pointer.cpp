@@ -8,7 +8,12 @@ Price* PricePointer::operator=(Price *ptr)
     return p;
 }
 
-Price* PricePointer::operator->()
+Price* PricePointer::operator->() const
 {
     return p;
+}
+
+Price& PricePointer::operator*() const
+{
+    return *p;
 }

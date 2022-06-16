@@ -17,7 +17,8 @@ public:
     }
 
     Price* operator=(Price*);
-    Price* operator->();
+    Price* operator->() const;
+    Price& operator*() const;
 };
 
 #endif

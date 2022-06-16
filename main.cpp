@@ -6,9 +6,11 @@
 int main()
 {            
     PricePointer p;
-    p = new Price;
+    p = new Price;    
     p->min = 25;
-    printf("test %d\n", p->min);
+    printf("min %d\n", p->min);
+    (*p).max = 30;
+    printf("max %d\n", p->max);    
     // Complex z = a + b + c;
     // printf("end of expression\n");
 
