@@ -7,3 +7,8 @@ Price* PricePointer::operator=(Price *ptr)
     p = ptr;
     return p;
 }
+
+Price* PricePointer::operator->()
+{
+    return p;
+}

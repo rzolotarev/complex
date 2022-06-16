@@ -1,26 +1,14 @@
 #include ".\complex.h"
 #include ".\IntArray\int_array.h"
-#include ".\MyInt\my_int.h"
+#include ".\operator_arrow\price.h"
 #include <stdio.h>
 
-void non_const(MyInt a)
-{
-    a.set_i(10);
-    printf("aha %d\n", a.get_i());
-}
-
 int main()
-{    
-    // int i = 4;
-    // int b = i++;
-    // =16;
-    // MyInt(5) = 7;
-    MyInt test(4);
-    ++test=16;
-
-    non_const(MyInt(5));
-    
-    // printf("test %d\n", test.get_i());
+{            
+    PricePointer p;
+    p = new Price;
+    p->min = 25;
+    printf("test %d\n", p->min);
     // Complex z = a + b + c;
     // printf("end of expression\n");
 

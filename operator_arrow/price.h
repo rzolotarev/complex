@@ -8,6 +8,7 @@ struct Price
 class PricePointer
 {
     Price *p;
+public:
     PricePointer(Price *ptr = 0): p(ptr){}
     ~PricePointer()
     {
@@ -15,7 +16,8 @@ class PricePointer
             delete p;
     }
 
-    Price* operator=(Price *ptr);
+    Price* operator=(Price*);
+    Price* operator->();
 };
 
 #endif
