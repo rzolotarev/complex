@@ -1,16 +1,16 @@
-#include ".\complex.h"
-#include ".\IntArray\int_array.h"
-#include ".\operator_arrow\price.h"
+#include "./complex.h"
+#include "./IntArray/int_array.h"
+#include "./operator_arrow/price.h"
 #include <stdio.h>
 
 int main()
-{            
+{
     PricePointer p;
-    p = new Price;    
+    p = new Price;
     p->min = 25;
     printf("min %d\n", p->min);
     (*p).max = 30;
-    printf("max %d\n", p->max);    
+    printf("max %d\n", p->max);
     // Complex z = a + b + c;
     // printf("end of expression\n");
 
@@ -21,5 +21,5 @@ int main()
     ia[500] = 10;
     ia[500]++;
     printf("array %d\n", ia[500]);
-    return 0;    
+    return 0;
 };
